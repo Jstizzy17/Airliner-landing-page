@@ -1,0 +1,183 @@
+:root {
+    --primary-color: #d32f2f;
+    --secondary-color: #ffc107;
+    --text-color: #333;
+    --background-color: #ffc107;
+    --cta-color: #d32f2f;
+    --cta-hover-color: #b71c1c;
+    --navbar-height: 30px; /* Assume navigation bar height for layout adjustment */
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+    background-color: var(--secondary-color); /* Use variable for consistency */
+    color: black;
+    border: 2px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    visibility: visible;
+}
+
+.button:hover {
+    background-color: var(--cta-hover-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--navbar-height) 0; /* Adjust padding based on navbar height */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Roboto Black', sans-serif; /* Choose a font that fits your brand */
+    font-size: 1.5em; /* Increase the size */
+    color: var(--secondary-color); /* Use your brand color */
+    text-transform: uppercase; /* A common styling for logos */
+    letter-spacing: 0.05em; /* Increase letter spacing for a more airy feel */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    margin-right: auto; /* Pushes the logo towards the center if it's the first item */
+    margin-left: auto; /* Use if the logo is not the first item */
+}
+
+.navigation {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation li {
+    padding: 5px 10px;
+}
+
+.navigation li:hover {
+    background-color: var(--primary-color); /* Corrected: use CSS variable directly */
+}
+
+#hero {
+    background-image: url('../assets/images/airplane-takeoff.jpg');
+    background-size: cover;
+    background-position: center center;
+    height: 400px; /* Adjust height as needed */
+    color: white;
+    text-align: center;
+    padding-top: calc(var(--navbar-height) + 300px); /* Increased padding-top to push content down */
+    padding-bottom: 100px; /* Maintain padding for visual balance */
+}
+
+#hero h1, #hero p {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-top: 100px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+.button {
+    margin-top: 3px; /* This pushes the content down */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+}
+
+.service-card {
+    background-color: #0d4179; /* Blue background */
+    color: white; /* White text for contrast */
+    padding: 20px; /* Padding inside each card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space content evenly */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section {
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    background-color: var(--background-color); /* Assuming a light color for contrast */
+    color: var(--text-color); /* A darker color for readability */
+}
+
+h2 {
+    color: var(--primary-color); /* A color that stands out, matching your brand */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#about {
+    background-color: #0d4179; /* A lighter or different hue */
+    color: white; /* Ensuring readability against the secondary color */
+}
+.service-card h3 {
+    margin-top: 0;
+    color: #ffffff; /* Ensuring the title stands out */
+}
+
+.service-card p {
+    flex-grow: 1; /* Allow the paragraph to fill space for aligning buttons at bottom */
+    margin-bottom: 20px; /* Space before the bottom of the card */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Slightly raise the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.experiences-container {
+    display: flex;
+    flex-direction: column; /* Or 'row' depending on the desired layout */
+    gap: 20px;
+}
+
+#contact form {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 15px; /* Space between form elements */
+}
+
+#contact input, #contact textarea, #contact button {
+    width: 100%; /* Full-width form elements */
+    padding: 10px;
+    margin: 5px 0; /* Space around elements */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Slightly rounded corners for aesthetics */
+}
